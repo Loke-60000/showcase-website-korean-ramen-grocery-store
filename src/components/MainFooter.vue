@@ -26,7 +26,7 @@ export default {
   display: flex;
   flex-direction: column;
   min-height: 25vh;
-  position: relative; /* Add this line */
+  position: relative;
 }
 
 .content-wrap {
@@ -40,9 +40,10 @@ export default {
   color: #2f2f2f;
   background-color: var(--main-color);
   flex-shrink: 0;
-  position: absolute; /* Add this line */
-  bottom: 0; /* Add this line */
-  width: 100%; /* Add this line */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 h1 {
@@ -65,15 +66,6 @@ body {
 
 body {
   flex: 1 0 auto;
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
-  padding: 30px;
-  color: #2f2f2f;
-  background-color: var(--main-color);
-  flex-shrink: 0;
 }
 
 .footer__content {
@@ -104,5 +96,31 @@ body {
 .footer p {
   color: black;
   margin: 0;
+}
+
+/* Add the following media query for responsiveness */
+@media (max-width: 768px) {
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .footer__logo {
+    font-size: 1.2rem;
+  }
+
+  .footer address {
+    font-size: 0.9rem;
+  }
+
+  .action_btn {
+    font-size: 0.9rem;
+  }
+
+  .footer a {
+    font-size: 0.9rem;
+  }
 }
 </style>

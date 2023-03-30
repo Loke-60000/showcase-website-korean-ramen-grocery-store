@@ -16,7 +16,7 @@ export default {
   components: { MainFooter },
   data() {
     return {
-      title: "Image Gallery",
+      title: "Gallerie",
       images: [
         { url: "https://lh5.googleusercontent.com/p/AF1QipM8UiBUhYFQsyyVhDUbzDjTBh6GV66nRTZyZ5at=s1941-k-no", alt: "Image 1" },
         { url: "https://lh5.googleusercontent.com/p/AF1QipNzZ78Eg9Vgi_-28rZD_Z-XjaPSO7o7Ux1dHpFs=s1455-k-no", alt: "Image 2" },

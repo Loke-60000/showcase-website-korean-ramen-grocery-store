@@ -47,7 +47,8 @@ export default {
   text-align: center;
   background-color: white;
   overflow: hidden;
-  padding-bottom: 2rem;
+  margin-top: 10vh;
+  padding-bottom: 10vh;
 }
 .about h1, p {
   font-size: 2rem;
@@ -57,7 +58,7 @@ export default {
 }
 .content{
   padding-top: 2rem;
-  margin: 0 10%;
+  margin: 0 auto;
   width: 80vw;
   max-width: 100%;
   box-sizing: border-box;
@@ -90,6 +91,7 @@ export default {
 
   .about h1, p {
     font-size: 1.5rem;
+    margin-right: -50px;
   }
 
   .map-container {
