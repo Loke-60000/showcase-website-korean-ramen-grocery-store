@@ -2,7 +2,7 @@
   <header>
     <div class="navbar">
       <div class="logo">
-        <RouterLink to="/"><img class="logo" src="../assets/logo.png" alt="" srcset=""></RouterLink>
+        <RouterLink to="/"><img class="logo" :src="logo" alt="" srcset=""></RouterLink>
       </div>
       <ul class="links">
         <li>
@@ -17,7 +17,7 @@
       </ul>
       <RouterLink to="/contact" class="action_btn">Contactez nous</RouterLink>
       <button class="toggle_btn" @click="toggleDropdown">
-        <img src="path/to/your/image.png" alt="Menu" />
+        <img src="https://www.clipartmax.com/png/small/36-365828_navbar-toggle-icon-menu-hamburger-png-white.png" alt="Menu" />
       </button>
     </div>
     <ul class="dropdown_menu" :class="{ open: isOpen }">
@@ -34,6 +34,7 @@
 <script>
 import { ref } from "vue";
 import { RouterLink, RouterView } from "vue-router";
+import logo from "../assets/logo.png";
 
 export default {
   name: "MainNavbar",
@@ -47,6 +48,7 @@ export default {
     return {
       isOpen,
       toggleDropdown,
+      logo,
     };
   },
 };

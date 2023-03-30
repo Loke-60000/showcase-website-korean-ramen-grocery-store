@@ -44,6 +44,7 @@ export default {
   text-align: center;
   height: 125vh;
   background-color: white;
+  width: 100vw !important;
 }
 .about h1, p {
   font-size: 2rem;
