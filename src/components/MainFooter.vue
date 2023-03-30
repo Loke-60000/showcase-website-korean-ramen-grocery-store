@@ -1,12 +1,13 @@
 <template>
   <footer class="footer">
     <div class="footer__content">
-      <h1 class="footer__logo">Something</h1>
+      <h1 class="footer__logo">Korean Ramen Epicerie Asiatique Montpellier</h1>
       <address>
-        5534 Somewhere In. The World 22193-10212<br />
-        <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+        114 Av. de Toulouse, 34070 Montpellier<br />
+        <RouterLink to="/contact" class="action_btn">Contactez nous</RouterLink>
       </address>
-      <p>&copy; 2019 Something. All rights reserved.</p>
+      <a href="https://github.com/Loke-60000">Website by Lokman</a>
+      <!-- <p>copyright 2023 Korean Ramen Epicerie Asiatique Montpellier. All rights reserved.</p> -->
     </div>
   </footer>
 </template>
@@ -18,6 +19,15 @@ export default {
 </script>
 
 <style>
+h1{
+  color: black;
+}
+
+:any-link{
+  /* text-decoration: none; */
+  color: black;
+}
+
 html,
 body {
   height: 100%;

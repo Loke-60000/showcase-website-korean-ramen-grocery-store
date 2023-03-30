@@ -27,14 +27,14 @@
       return {
         activeImage: 0,
         images: [
-          "https://lh5.googleusercontent.com/p/AF1QipM8UiBUhYFQsyyVhDUbzDjTBh6GV66nRTZyZ5at=s1941-k-no",
+          "https://lh3.googleusercontent.com/p/AF1QipM7rC9myfSv-UmZOE3ofNn0IvAPjyu1Nlvqb8PM=s1360-w1360-h1020",
           "https://lh5.googleusercontent.com/p/AF1QipNzZ78Eg9Vgi_-28rZD_Z-XjaPSO7o7Ux1dHpFs=s1455-k-no",
           "https://lh5.googleusercontent.com/p/AF1QipP8mm_bUt1LVxzquyT6w3JHMI2cl1Mya8STQWiw=s1941-k-no",
         ],
         imageTitles: [
-          "Image Title 1",
-          "Image Title 2",
-          "Image Title 3",
+          "Un multitude de produit d'Asie.",
+          "Un large choix de Ramen.",
+          "Venez prendre un bol de ramen sur place!",
         ],
       };
     },
@@ -91,6 +91,7 @@
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
     width: 100%;
+    height: 15%;
     padding: 1rem;
     text-align: center;
     font-size: 2rem;

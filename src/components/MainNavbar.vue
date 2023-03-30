@@ -2,30 +2,30 @@
   <header>
     <div class="navbar">
       <div class="logo">
-        <a href=""><img class="logo" src="../assets/logo.png" alt="" srcset=""></a>
+        <RouterLink to="/"><img class="logo" src="../assets/logo.png" alt="" srcset=""></RouterLink>
       </div>
       <ul class="links">
         <li>
-          <a href=""><RouterLink to="/">Home</RouterLink></a>
+          <RouterLink to="/">Home</RouterLink>
         </li>
         <li>
-          <a href=""><RouterLink to="/about">About</RouterLink></a>
+          <RouterLink to="/about">A propos</RouterLink>
         </li>
-        <li><a href="">Services</a></li>
+        <li>
+          <RouterLink to="/gallery">Gallerie</RouterLink>
+        </li>
       </ul>
-      <a href="" class="action_btn">
-        <RouterLink to="/contact">Contactez nous</RouterLink>
-      </a>
+      <RouterLink to="/contact" class="action_btn">Contactez nous</RouterLink>
       <button class="toggle_btn" @click="toggleDropdown">
         <img src="path/to/your/image.png" alt="Menu" />
       </button>
     </div>
     <ul class="dropdown_menu" :class="{ open: isOpen }">
-      <li><a href="">Home</a></li>
-      <li><a href="">About</a></li>
-      <li><a href="">Services</a></li>
+      <li><RouterLink to="/">Home</RouterLink></li>
+      <li><RouterLink to="/about">About</RouterLink></li>
+      <li><RouterLink to="/gallery">Gallery</RouterLink></li>
       <li>
-        <a href=""><RouterLink to="/contact">Contactez nous</RouterLink></a>
+        <RouterLink to="/contact">Contactez nous</RouterLink>
       </li>
     </ul>
   </header>
@@ -75,9 +75,9 @@ a {
   color: white;
 }
 
-a:hover {
+/* a:hover {
   color: orange;
-}
+} */
 
 header {
   position: fixed;
@@ -98,32 +98,38 @@ header {
   justify-content: space-between;
 }
 
-.navbar .logo a {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
 .navbar .links {
   display: flex;
   gap: 2rem;
 }
 
-.navbar .toggle_btn {
+.toggle_btn {
   display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-.action_btn {
+.toggle_btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.action_btn,
+.dropdown_menu li {
   background-color: orange;
-  padding: 0.5rem 1rem;
-  border: none;
-  outline: none;
-  border-radius: 20px;
-  font-size: 1rem;
+  color: white;
   font-weight: bold;
 }
 
+.action_btn {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  transition: transform 0.2s;
+}
+
 .action_btn:hover {
-  color: white;
   transform: scale(1.05);
 }
 
@@ -152,7 +158,7 @@ header {
 }
 
 .dropdown_menu.open {
-  height: 300px;
+  height: 190px;
 }
 
 @media (max-width: 992px) {
@@ -160,15 +166,8 @@ header {
   .navbar .action_btn {
     display: none;
   }
-  .navbar .toggle_btn {
+  .toggle_btn {
     display: block;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  .navbar .toggle_btn img {
-    width: 24px;
-    height: 24px;
   }
   .dropdown_menu {
     display: block;
