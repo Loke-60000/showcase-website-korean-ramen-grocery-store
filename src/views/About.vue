@@ -31,20 +31,23 @@
       </div>
     </div>
   </div>
+  <MainFooter/>
 </template>
 <script>
+
 export default {
   name: "About",
+  // components: {MainFooter},
 };
+
 </script>
 
 <style scoped>
-
 .about {
   text-align: center;
-  height: 125vh;
   background-color: white;
-  width: 100vw !important;
+  overflow: hidden;
+  padding-bottom: 2rem;
 }
 .about h1, p {
   font-size: 2rem;
@@ -53,10 +56,12 @@ export default {
   font-size: medium;
 }
 .content{
-  padding-top: 200px;
+  padding-top: 2rem;
   margin: 0 10%;
+  width: 80vw;
+  max-width: 100%;
+  box-sizing: border-box;
 }
-
 .map-container {
   display: flex;
   justify-content: center;
@@ -72,30 +77,36 @@ export default {
   align-items: center;
 }
 
-.phone-btn {
-  display: inline-block;
-  background-color: #ffc40e;
-  color: black;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  font-size: medium;
-  margin-top: 1rem;
-  transition: background-color 0.2s;
-}
-
-.phone-btn:hover {
-  background-color: #ff9e00;
-}
-
 .opening-hours p {
   margin: 0.25rem 0;
 }
 
 /* Add a media query for mobile devices */
 @media (max-width: 768px) {
+  .content {
+    padding-top: 1rem;
+    margin: 0 5%;
+  }
+
+  .about h1, p {
+    font-size: 1.5rem;
+  }
+
   .map-container {
     flex-direction: column;
+  }
+
+  .address-container {
+    margin-top: 1rem;
+  }
+
+  .opening-hours p {
+    font-size: 0.8rem;
+  }
+
+  iframe {
+    width: 100%;
+    height: 300px;
   }
 }
 </style>

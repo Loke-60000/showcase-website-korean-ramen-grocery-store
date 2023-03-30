@@ -1,30 +1,55 @@
 <template>
-  <footer class="footer">
-    <div class="footer__content">
-      <h1 class="footer__logo">Korean Ramen Epicerie Asiatique Montpellier</h1>
-      <address>
-        114 Av. de Toulouse, 34070 Montpellier<br />
-        <RouterLink to="/contact" class="action_btn">Contactez nous</RouterLink>
-      </address>
-      <a href="https://github.com/Loke-60000">Website by Lokman</a>
-      <!-- <p>copyright 2023 Korean Ramen Epicerie Asiatique Montpellier. All rights reserved.</p> -->
+  <div class="page-container">
+    <div class="content-wrap">
+      <div class="about main-content">
+        <footer class="footer">
+          <div class="footer__content">
+            <h1 class="footer__logo">Korean Ramen Epicerie Asiatique Montpellier</h1>
+            <address>
+              114 Av. de Toulouse, 34070 Montpellier<br />
+              <RouterLink to="/contact" class="action_btn">Contactez nous</RouterLink>
+            </address>
+            <a href="https://github.com/Loke-60000">Website by Lokman</a>
+          </div>
+        </footer>
+      </div>
     </div>
-  </footer>
+  </div>
 </template>
-
 <script>
 export default {
   name: "MainFooter",
 };
 </script>
-
 <style>
-h1{
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 25vh;
+  position: relative; /* Add this line */
+}
+
+.content-wrap {
+  flex: 1;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  color: #2f2f2f;
+  background-color: var(--main-color);
+  flex-shrink: 0;
+  position: absolute; /* Add this line */
+  bottom: 0; /* Add this line */
+  width: 100%; /* Add this line */
+}
+
+h1 {
   color: black;
 }
 
-:any-link{
-  /* text-decoration: none; */
+:any-link {
   color: black;
 }
 
@@ -71,7 +96,7 @@ body {
   margin-bottom: 1em;
 }
 
-.footer__btn {
+.action_btn {
   color: #2f2f2f;
   text-decoration: none;
 }

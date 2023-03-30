@@ -1,15 +1,3 @@
-import { fileURLToPath, URL } from 'node:url'
-
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [vue()],
-  base: '/showcase-website-korean-ramen-grocery-store/',
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
-  }
-})
+version https://git-lfs.github.com/spec/v1
+oid sha256:c51963d555b8a518a68f8f3e6174d7e9491039324e5c6fd933c620a6af699a21
+size 357
